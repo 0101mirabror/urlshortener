@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block  main_page %}
+    {% comment %} <div class="container">
+        <header>
+            <div class="row mb-3" style="margin-top:75px;"> 
+                <div class="col-6 offset-3">
+                    <span class="d-flex justify-content-center">
+                        <a href="#" class="logo h-1">Short URL</a>
+                        <i class="fa-duotone fa-octagon-xmark"></i>
+                    
+                    </span>
+                </div>
+            </div>
+        </header>
+        
+        
+        
+        
+    </div>
+    <hr class="" style="border-top: 2px solid #161b1d;"/> {% endcomment %}
+    <div class="container">
+        <div class="row mt-5 mb-5">
+            <div class='col-8 offset-2'>
+               
+                    
+                        <h5 class="tl-text mb-2  "  >URL Click Counter</h5>
+                        <h6 class="card-subtitle mb-4  tx-text"> 
+                            Enter the URL to find out how many clicks it has received so far.
+                        </h6>
+                        <div class="card text-center"  >
+                            <div class="card-body shadow-sm">
+                              <div class="input-group mt-4 mb-3"  >
+                                <input type="text" class="form-control fs-5   " placeholder="Enter here your shortened URL" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <div class=" ">
+                                    <!-- class="input-group-append" -->
+                                    <button class=" btn text-white rounded-right tl-text  btn-color" type="button"
+                                          style="padding: 1rem .75rem;
+                                                 font-weight:700;">
+                                                
+                                            Track Clicks
+                                    </button>
+                                </div>
+                            </div>
+                              <h6 class="text-start  mb-4   tx-text">Example: shorturl.at/AbCdE
+                              </h6>
+                              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="card-link">Card link</a>
+                              <a href="#" class="card-link">Another link</a> -->
+                            </div>
+                        </div>
+                        <h6 class="mt-5 mb-4  tx-text"> 
+                            * Track the total hits of the shortened URL in real time, you do not have to register.
+                        </h6>
+         
+                   
+            </div>
+        </div>
+    </div>
+    {% comment %} <div class="footer">
+        <!-- <hr class="text-primary" style="border-top: 5px solid #00a0db;"/> -->
+        <span class=" table-dark">  &copy 2022 ShortUrl.at - Tool to shorten a long link.
+        </span>
+        <ul class="d-flex  justify-content-center" style="list-style: none;">
+            <li><a class="text-decoration-none footer-url pe-5" href="shorturl">ShortUrl.at</a></li>
+            <li><a class="text-decoration-none footer-url pe-5" href="url-click-counter">URL Click Counter</a></li>
+            <li><a class="text-decoration-none footer-url pe-5" href="report-malicious-url">Report Malicious URL</a></li>
+            <li><a class="text-decoration-none footer-url pe-5" href="terms-of-service">Terms of Service</a></li>
+            <li><a class="text-decoration-none footer-url pe-5" href="privacy-policy">Privacy</a></li>
+            <li><a class="text-decoration-none footer-url pe-5" href="contact">Contact</a></li>
+        </ul>
+    </div> {% endcomment %}
+{% endblock main_page %}

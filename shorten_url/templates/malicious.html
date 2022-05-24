@@ -1,0 +1,90 @@
+{% extends 'base.html' %}{%load crispy_forms_tags %} 
+
+{% block malicious %}
+    {% comment %} <div class="container">
+        <header>
+            <div class="row mb-3" style="margin-top:75px;"> 
+                <div class="col-6 offset-3">
+                    <span class="d-flex justify-content-center">
+                        <a href="#" class="logo h-1">Short URL</a>
+                        <i class="fa-duotone fa-octagon-xmark"></i>
+                    
+                    </span>
+                </div>
+            </div>
+        </header>
+        
+        
+        
+        
+    </div>
+    <hr class="" style="border-top: 2px solid #161b1d;"/> {% endcomment %}
+    <div class="container">
+        <div class="row mt-5 mb-5">
+            <div class='col-8 offset-2'>
+                        <h5 class="card-title   mb-2  tl-text">Report Malicious Short Link</h5>
+                        <h6 class="card-subtitle mb-4  tx-text"> 
+                            Use the form below to report URLs that are distributing spam and malware. Help us by sending links that are against our terms of use, we will delete and block these shortened links. If spammers are sending you e-mails containing our shortened URLs, tell us and we can take quick action to avoid the distribution of inappropriate links.
+                        </h6>
+                        <div class="col-6 card text-center"  >
+                            <div class="card-body shadow ">
+                                
+                                <form method='POST'>
+                                    {{form.field|crispy}}
+                                    <div class="mt-4 mb-3"  >
+                                     {% csrf_token %} d
+                                            <label for="url" class="col-12 fs-4 text-start tx-text">Invalid or malicious URL</label><br />
+                                            <input type="url" id='url' name='shorturl' class="form-control fs-3 p-3 rounded" placeholder="shorturl.at/AbCeE">
+                                        
+                                            <label for="url" class="col-12 fs-4 text-start tx-text">Email</label><br />
+                                            <input type="email" id='url' name='email' class="form-control fs-3 p-3 rounded" >
+                                                
+                                            <label for="url" class="col-12 fs-4 text-start tx-text">Comment</label><br />
+                                                <div class="form-floating col-12">
+                                                    <textarea class="form-control" name='message' style="height:auto;" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                                                    <label for="floatingTextarea">Comments</label>
+                                                     
+                                         
+                                        <div class="row">
+                                            <div class="col-12 mt-2">
+                                                <p class="text-dark text-start fs-4">
+                                                    {{num.a}} + {{num.b}} = 
+                                                    <input class="w-12" name='captcha' style="width: 50px;" value="" /> 
+                                                    <input type='hidden' name='a' value="{{num.a}}" />
+                                                    <input type='hidden' name='b' value="{{num.b}}" />
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class='row'>
+                                            <div class="col-12 mt-2 mb-10 text-end">
+                                                <input type="submit" value='Send' class="btn btn-color btn-md" /> 
+                                                <input type="reset" value='Clean' class="btn btn-color btn-md" /> 
+                                            </div>
+                                        </div>     
+                                    </div>    
+                                </form>
+
+                              
+                            </div>
+                        </div>
+                      
+         
+                   
+            </div>
+        </div>
+    </div>
+</div>
+    {% comment %} <div class="footer ">
+         
+        <span class=" table-dark">  &copy 2022 ShortUrl.at - Tool to shorten a long link.
+        </span>
+        <ul class="d-flex  justify-content-center mt-2" style="list-style: none;">
+            <li><a class="text-decoration-none footer-url pe-5" href="shorturl">ShortUrl.at</a></li>
+            <li><a class="text-decoration-none footer-url pe-5" href="url-click-counter">URL Click Counter</a></li>
+            <li><a class="text-decoration-none footer-url pe-5" href="report-malicious-url">Report Malicious URL</a></li>
+            <li><a class="text-decoration-none footer-url pe-5" href="terms-of-service">Terms of Service</a></li>
+            <li><a class="text-decoration-none footer-url pe-5" href="privacy-policy">Privacy</a></li>
+            <li><a class="text-decoration-none footer-url pe-5" href="contact">Contact</a></li>
+        </ul>
+    </div> {% endcomment %}
+ {% endblock malicious %}
