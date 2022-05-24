@@ -1,0 +1,52 @@
+{% load static %}
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap&display=swap" rel="stylesheet">
+    <link href="https://allfont.net/allfont.css?fonts=asap-bold" rel="stylesheet" type="text/css" />
+    <link href="https://allfont.net/allfont.css?fonts=asap" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@600&family=Asap:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href="{% static 'css/main.css'%}"   rel="stylesheet">
+    <link href="https://allfont.net/allfont.css?fonts=asap" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <title>URL Shortener</title>
+    
+</head>
+<body>
+    {% block header %}
+        {% include 'layout/header.html'%}
+    {% endblock header %}
+
+    {% block main_page %}
+    {% endblock main_page %}
+
+    {% block contact %}
+    {% endblock contact %}
+
+    {% block malicious %}
+    {% endblock malicious %}
+
+    {% block short_url %}
+    {% endblock short_url %}
+    {% block footer %}
+        {% include 'layout/footer.html' %}
+    {% endblock footer %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    {% block scripts %}
+    {% endblock scripts %}
+</body>
+</html>
